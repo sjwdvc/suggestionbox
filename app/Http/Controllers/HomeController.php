@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Suggestion;
-use App\Models\User;
 use Illuminate\Http\Request;
 
-class SuggestionController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +13,7 @@ class SuggestionController extends Controller
      */
     public function index()
     {
-        $suggestions = Suggestion::all();
-
-        $suggestion = Suggestion::find(1);
-        return view('index',compact('suggestions'));
+        return view('dashboard');
     }
 
     /**
@@ -45,10 +40,10 @@ class SuggestionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Suggestion  $suggestion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Suggestion $suggestion)
+    public function show($id)
     {
         //
     }
@@ -56,10 +51,10 @@ class SuggestionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Suggestion  $suggestion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Suggestion $suggestion)
+    public function edit($id)
     {
         //
     }
@@ -68,10 +63,10 @@ class SuggestionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Suggestion  $suggestion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Suggestion $suggestion)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -79,10 +74,10 @@ class SuggestionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Suggestion  $suggestion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Suggestion $suggestion)
+    public function destroy($id)
     {
         //
     }

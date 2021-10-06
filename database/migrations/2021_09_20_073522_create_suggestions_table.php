@@ -17,7 +17,7 @@ class CreateSuggestionsTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->unsignedInteger('author');
+            $table->unsignedInteger('user_id');
             $table->timestamps();
         });
     }

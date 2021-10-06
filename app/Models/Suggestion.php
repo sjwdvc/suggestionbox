@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Suggestion extends Model
 {
     use HasFactory;
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function reactions(){
+        return $this->hasMany(Reaction::class);
+    }
 }
