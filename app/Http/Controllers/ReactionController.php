@@ -14,7 +14,8 @@ class ReactionController extends Controller
      */
     public function index()
     {
-        //
+        $reactions = Reaction::all();
+        return view('reactions.index', compact('reactions'));
     }
 
     /**

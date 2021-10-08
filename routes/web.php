@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ReactionController;
 use App\Http\Controllers\SuggestionController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,5 +23,6 @@ Route::get('/', function () {
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/suggestions', [SuggestionController::class, 'index'])->name('suggestions');
+Route::get('/reactions', [ReactionController::class, 'index'])->name('reactions');
 
 require __DIR__.'/auth.php';
